@@ -1,0 +1,177 @@
+
+/* Class = "UILabel"; text = "Write a Review"; ObjectID = "15E-37-219"; */
+"15E-37-219.text" = "Viết nhận xét";
+
+/* Class = "UISegmentedControl"; 15H-PY-QSQ.segmentTitles[0] = "%"; ObjectID = "15H-PY-QSQ"; */
+"15H-PY-QSQ.segmentTitles[0]" = "%";
+
+/* Class = "UISegmentedControl"; 15H-PY-QSQ.segmentTitles[1] = "₫"; ObjectID = "15H-PY-QSQ"; */
+"15H-PY-QSQ.segmentTitles[1]" = "₫";
+
+/* Class = "UILabel"; text = "Selling Price"; ObjectID = "2as-rh-4vn"; */
+"2as-rh-4vn.text" = "Giá bán";
+
+/* Class = "UILabel"; text = "Buying Commission"; ObjectID = "2sZ-Dr-0TJ"; */
+"2sZ-Dr-0TJ.text" = "Phí hoa hồng (mua)";
+
+/* Class = "UILabel"; text = "Net Buying Price"; ObjectID = "5C4-fL-4Qa"; */
+"5C4-fL-4Qa.text" = "Giá mua ròng";
+
+/* Class = "UITabBarItem"; title = "Calculator"; ObjectID = "5M2-Bg-rQk"; */
+"5M2-Bg-rQk.title" = "Máy tính";
+
+/* Class = "UILabel"; text = "Number of Shares"; ObjectID = "6i6-Af-O4a"; */
+"6i6-Af-O4a.text" = "Số lượng cổ phiếu";
+
+/* Class = "UIButton"; normalTitle = "See All"; ObjectID = "7pZ-L0-tck"; */
+"7pZ-L0-tck.normalTitle" = "See All";
+
+/* Class = "UILabel"; text = "Return on investment (ROI)"; ObjectID = "9Wr-7h-qTM"; */
+"9Wr-7h-qTM.text" = "Tỷ suất hoàn vốn (ROI)";
+
+/* Class = "UILabel"; text = "Version"; ObjectID = "Big-ll-bBf"; */
+"Big-ll-bBf.text" = "Phiên bản";
+
+/* Class = "UILabel"; text = "Input"; ObjectID = "C4a-OF-JaC"; */
+"C4a-OF-JaC.text" = "Nhập vào";
+
+/* Class = "UILabel"; text = "Selling Commission"; ObjectID = "C7l-r0-JvA"; */
+"C7l-r0-JvA.text" = "Phí hoa hồng (bán)";
+
+/* Class = "UILabel"; text = "NPV Calculator"; ObjectID = "C7x-Za-VV2"; */
+"C7x-Za-VV2.text" = "Máy tính lãi vay";
+
+/* Class = "UILabel"; text = "1.0.0"; ObjectID = "DZP-ps-3ou"; */
+"DZP-ps-3ou.text" = "1.0.0";
+
+/* Class = "UILabel"; text = "Selling Price"; ObjectID = "Evw-kH-uyr"; */
+"Evw-kH-uyr.text" = "Giá bán";
+
+/* Class = "UILabel"; text = "₫"; ObjectID = "H5o-LA-oQ5"; */
+"H5o-LA-oQ5.text" = "₫";
+
+/* Class = "UILabel"; text = "₫"; ObjectID = "ILn-sd-dhb"; */
+"ILn-sd-dhb.text" = "₫";
+
+/* Class = "UIButton"; normalTitle = "Calculate"; ObjectID = "JCf-jZ-Kdg"; */
+"JCf-jZ-Kdg.normalTitle" = "Tính toán";
+
+/* Class = "UILabel"; text = "Buying Commission"; ObjectID = "L09-fH-OlM"; */
+"L09-fH-OlM.text" = "Phí hoa hồng (mua)";
+
+/* Class = "UILabel"; text = "Result"; ObjectID = "Lt9-ph-g7c"; */
+"Lt9-ph-g7c.text" = "Kết quả";
+
+/* Class = "UILabel"; text = "Report & feedback "; ObjectID = "MNZ-r9-1JD"; */
+"MNZ-r9-1JD.text" = "Báo cáo & Góp ý";
+
+/* Class = "UILabel"; text = "₫1,108.93"; ObjectID = "Poc-DV-r7w"; */
+"Poc-DV-r7w.text" = "₫1,108.93";
+
+/* Class = "UILabel"; text = "Break-Even Share Price"; ObjectID = "QtC-D0-oto"; */
+"QtC-D0-oto.text" = "Giá bán hoà vốn";
+
+/* Class = "UILabel"; text = "CAGR Calculator"; ObjectID = "RRl-ty-PHU"; */
+"RRl-ty-PHU.text" = "Máy tính lợi nhuận đầu tư";
+
+/* Class = "UILabel"; text = "Buying Price"; ObjectID = "VVW-LX-bEM"; */
+"VVW-LX-bEM.text" = "Giá mua";
+
+/* Class = "UILabel"; text = "Selling Commission"; ObjectID = "VfF-Xf-CDi"; */
+"VfF-Xf-CDi.text" = "Phí hoa hồng (bán)";
+
+/* Class = "UILabel"; text = "₫1,108.93"; ObjectID = "Vt2-dK-1lG"; */
+"Vt2-dK-1lG.text" = "₫1,108.93";
+
+/* Class = "UILabel"; text = "Restore"; ObjectID = "WAr-Gf-Sc0"; */
+"WAr-Gf-Sc0.text" = "Restore";
+
+/* Class = "UILabel"; text = "Make a detailed investment plan."; ObjectID = "WIy-tC-ZbY"; */
+"WIy-tC-ZbY.text" = "Tính toán cho khoản vay của bạn";
+
+/* Class = "UILabel"; text = "6%"; ObjectID = "Wx3-OG-Xba"; */
+"Wx3-OG-Xba.text" = "6%";
+
+/* Class = "UILabel"; text = "Buying Price"; ObjectID = "Yg6-Ti-Ybv"; */
+"Yg6-Ti-Ybv.text" = "Giá mua";
+
+/* Class = "UINavigationItem"; title = "Result"; ObjectID = "YlE-Co-qBT"; */
+"YlE-Co-qBT.title" = "Kết quả";
+
+/* Class = "UILabel"; text = "Share this App"; ObjectID = "Z4X-YM-d1S"; */
+"Z4X-YM-d1S.text" = "Chia sẻ App";
+
+/* Class = "UILabel"; text = "₫1,736.01"; ObjectID = "ZgN-jq-OCx"; */
+"ZgN-jq-OCx.text" = "₫1,736.01";
+
+/* Class = "UITabBarItem"; title = "Info"; ObjectID = "all-03-4uS"; */
+"all-03-4uS.title" = "Info";
+
+/* Class = "UILabel"; text = "₫10"; ObjectID = "bhm-sq-kTM"; */
+"bhm-sq-kTM.text" = "₫10";
+
+/* Class = "UILabel"; text = "₫1,000.00"; ObjectID = "cUi-qY-v0b"; */
+"cUi-qY-v0b.text" = "₫1,000.00";
+
+/* Class = "UILabel"; text = "Calculate compound annual growth rate"; ObjectID = "cwb-uq-8GE"; */
+"cwb-uq-8GE.text" = "Lên kế hoạch đầu tư cho mọi lĩnh vực kinh doanh";
+
+/* Class = "UILabel"; text = "₫1,108.93"; ObjectID = "dUm-Rx-miv"; */
+"dUm-Rx-miv.text" = "₫1,108.93";
+
+/* Class = "UILabel"; text = "Selling Commission"; ObjectID = "esL-02-y8x"; */
+"esL-02-y8x.text" = "Phí hoa hồng (bán)";
+
+/* Class = "UILabel"; text = "₫3,108.93"; ObjectID = "fjp-av-du6"; */
+"fjp-av-du6.text" = "₫3,108.93";
+
+/* Class = "UILabel"; text = "₫100/Period"; ObjectID = "ftq-Wz-CFs"; */
+"ftq-Wz-CFs.text" = "₫100/Period";
+
+/* Class = "UILabel"; text = "✎"; ObjectID = "hiP-eK-8KG"; */
+"hiP-eK-8KG.text" = "✎";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "iVF-26-RiQ"; */
+"iVF-26-RiQ.text" = "10";
+
+/* Class = "UILabel"; text = "Buying Commission"; ObjectID = "ktC-Pd-1ah"; */
+"ktC-Pd-1ah.text" = "Phí hoa hồng (mua)";
+
+/* Class = "UILabel"; text = "₫100/Period"; ObjectID = "l0C-va-4GA"; */
+"l0C-va-4GA.text" = "₫100/Period";
+
+/* Class = "UINavigationItem"; title = "Calculator"; ObjectID = "naZ-hn-F2f"; */
+"naZ-hn-F2f.title" = "Máy tính";
+
+/* Class = "UINavigationItem"; title = "Information"; ObjectID = "on8-hl-W4m"; */
+"on8-hl-W4m.title" = "Thông tin";
+
+/* Class = "UISegmentedControl"; q1u-du-82J.segmentTitles[0] = "%"; ObjectID = "q1u-du-82J"; */
+"q1u-du-82J.segmentTitles[0]" = "%";
+
+/* Class = "UISegmentedControl"; q1u-du-82J.segmentTitles[1] = "₫"; ObjectID = "q1u-du-82J"; */
+"q1u-du-82J.segmentTitles[1]" = "₫";
+
+/* Class = "UILabel"; text = "Profit"; ObjectID = "s1R-9c-Ysf"; */
+"s1R-9c-Ysf.text" = "Lợi nhuận";
+
+/* Class = "UILabel"; text = "▹"; ObjectID = "sog-Ud-S2X"; */
+"sog-Ud-S2X.text" = "▹";
+
+/* Class = "UILabel"; text = "Net Selling Price"; ObjectID = "spk-lb-054"; */
+"spk-lb-054.text" = "Giá bán ròng";
+
+/* Class = "UILabel"; text = "Our other apps"; ObjectID = "tnu-0C-zkv"; */
+"tnu-0C-zkv.text" = "Ứng dụng khác";
+
+/* Class = "UILabel"; text = "₫1,108.93"; ObjectID = "vlM-E6-JeG"; */
+"vlM-E6-JeG.text" = "₫1,108.93";
+
+/* Class = "UILabel"; text = "Resource"; ObjectID = "x9W-jO-GUg"; */
+"x9W-jO-GUg.text" = "Nguồn";
+
+/* Class = "UILabel"; text = "Number of Shares"; ObjectID = "xFn-aL-4iP"; */
+"xFn-aL-4iP.text" = "Số lượng cổ phiếu";
+
+/* Class = "UIButton"; normalTitle = "Upgrade & Remove Ads"; ObjectID = "yTE-Nk-eHk"; */
+"yTE-Nk-eHk.normalTitle" = "Nâng cấp & Bỏ quảng cáo";

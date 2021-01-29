@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  StockCalculator
+
+  Created by Phan Đăng on 12/12/20.
+  
+*/
+
+"country" = "VN";
+"currency" = "₫";
+
+"thereWasAnError" = "Có lỗi xảy ra, vui lòng thử lại";
+"error" = "Lỗi";
+"notification" = "Thông báo";
+"numberOfSharesIsNotNegative" = "Số lượng cổ phiếu phải là mốt số không âm, vui lòng thử lại!";
+"upgradeAndRemoveAds" = "Nâng cấp để loại bỏ quảng cáo và mở khóa tất cả các tính năng. Chỉ ";
+"defaultValueIsPercent" = "";
+"defaultValueIsPercent" = "Giá trị mặc định là \"%\". Vui lòng mở khoá tất cả chức năng và bỏ quảng cáo. Chỉ ";

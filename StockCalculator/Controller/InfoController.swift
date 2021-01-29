@@ -114,7 +114,7 @@ class InfoController: UIViewController, MFMailComposeViewControllerDelegate {
     
     
     @objc func openStair() {
-        if let url = URL(string: "https://apps.apple.com/app/npv-calculator-by-nd-calc/id1496500153"),
+        if let url = URL(string: "https://apps.apple.com/app/id1531071094"),
             UIApplication.shared.canOpenURL(url)
         {
             if #available(iOS 10.0, *) {
@@ -126,7 +126,7 @@ class InfoController: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     @objc func openAuto() {
-        if let url = URL(string: "https://apps.apple.com/app/cagr-calculator/id1502833721"),
+        if let url = URL(string: "https://apps.apple.com/app/id1542576418"),
             UIApplication.shared.canOpenURL(url)
         {
             if #available(iOS 10.0, *) {

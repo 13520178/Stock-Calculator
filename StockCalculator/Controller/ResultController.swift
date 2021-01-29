@@ -58,8 +58,8 @@ class ResultController: UIViewController,GADBannerViewDelegate  {
 
         if !defaults.bool(forKey: "isRemoveAds"){
             bannerView.delegate = self
-            //bannerView.adUnitID = ""
-            bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //Test
+            bannerView.adUnitID = "ca-app-pub-9626752563546060/4694680483"
+            //bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //Test
             bannerView.rootViewController = self
         }
         
@@ -84,39 +84,39 @@ class ResultController: UIViewController,GADBannerViewDelegate  {
         breakEvenSharePriceToShowResult = (breakEvenSharePriceToShowResult*100).rounded()/100
         
         numberOfSharesLabel.text = "\(Tools.changeToCurrency(moneyStr: numberOfSharesToShowResult)!)"
-        buyingPriceLabel.text = "$ \(Tools.changeToCurrency(moneyStr: buyingPriceToShowResult)!)"
-        sellPriceLabel.text = "$ \(Tools.changeToCurrency(moneyStr: sellingPriceToShowResult)!)"
+        buyingPriceLabel.text = "\(StringForLocal.currency) \(Tools.changeToCurrency(moneyStr: buyingPriceToShowResult)!)"
+        sellPriceLabel.text = "\(StringForLocal.currency) \(Tools.changeToCurrency(moneyStr: sellingPriceToShowResult)!)"
         
         
-        netBuyPriceLabel.text = "$ \(Tools.changeToCurrency(moneyStr: netBuyingPriceToShowResult)!)"
-        netSellPriceLabel.text = "$ \(Tools.changeToCurrency(moneyStr: netSellingPriceToShowResult)!)"
-        profitLabel.text = "$ \(Tools.changeToCurrency(moneyStr: profitToShowResult)!)"
+        netBuyPriceLabel.text = "\(StringForLocal.currency) \(Tools.changeToCurrency(moneyStr: netBuyingPriceToShowResult)!)"
+        netSellPriceLabel.text = "\(StringForLocal.currency) \(Tools.changeToCurrency(moneyStr: netSellingPriceToShowResult)!)"
+        profitLabel.text = "\(StringForLocal.currency) \(Tools.changeToCurrency(moneyStr: profitToShowResult)!)"
         if profitToShowResult >= 0 {
             profitLabel.textColor = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1)
         }else {
             profitLabel.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
         }
         roiLabel.text = "\(Tools.changeToCurrency(moneyStr: roiToShowResult)!)%"
-        breakEvenSharePriceLabel.text = "$ \(Tools.changeToCurrency(moneyStr: breakEvenSharePriceToShowResult)!)"
+        breakEvenSharePriceLabel.text = "\(StringForLocal.currency) \(Tools.changeToCurrency(moneyStr: breakEvenSharePriceToShowResult)!)"
         
         if buyingSegment == 0 {
             //%
-            buyCommissionResultLabel.text = "$ \(Tools.changeToCurrency(moneyStr: buyingCommissionResultToShowResult)!)"
+            buyCommissionResultLabel.text = "\(StringForLocal.currency) \(Tools.changeToCurrency(moneyStr: buyingCommissionResultToShowResult)!)"
             buyCommissionLabel.text = "\(Tools.changeToCurrency(moneyStr: buyingCommissionInputToShowResult)!)%"
         }else {
             //$
             buyCommissionResultLabel.text = "\(Tools.changeToCurrency(moneyStr: buyingCommissionResultToShowResult)!)%"
-            buyCommissionLabel.text = "$ \(Tools.changeToCurrency(moneyStr: buyingCommissionInputToShowResult)!)"
+            buyCommissionLabel.text = "\(StringForLocal.currency) \(Tools.changeToCurrency(moneyStr: buyingCommissionInputToShowResult)!)"
         }
         
         if sellingSegment == 0 {
             //%
-            sellCommissionResultLabel.text = "$ \(Tools.changeToCurrency(moneyStr: sellingCommissionResultToShowResult)!)"
+            sellCommissionResultLabel.text = "\(StringForLocal.currency) \(Tools.changeToCurrency(moneyStr: sellingCommissionResultToShowResult)!)"
             sellCommissionLabel.text = "\(Tools.changeToCurrency(moneyStr: sellingCommissionInputToShowResult)!)%"
         }else {
             //$
             sellCommissionResultLabel.text = "\(Tools.changeToCurrency(moneyStr: sellingCommissionResultToShowResult)!)%"
-            sellCommissionLabel.text = "$ \(Tools.changeToCurrency(moneyStr: sellingCommissionInputToShowResult)!)"
+            sellCommissionLabel.text = "\(StringForLocal.currency) \(Tools.changeToCurrency(moneyStr: sellingCommissionInputToShowResult)!)"
         }
         
         AppStoreReviewManager.requestReviewIfAppropriate()

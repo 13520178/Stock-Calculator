@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  StockCalculator
+
+  Created by Phan Đăng on 12/12/20.
+  
+*/
+
+"country" = "US";
+"currency" = "$";
+
+"thereWasAnError" = "There was an error in the input process, please check again.";
+"error" = "Error";
+"notification" = "Notification";
+"numberOfSharesIsNotNegative" = "Number of Shares must be a non-negative number, please try again.";
+"upgradeAndRemoveAds" = "Upgrade to remove ads and unlock all features. Only ";
+"defaultValueIsPercent" = "The default value is \"%\". Please unlock to change this value and remove ads. Only ";

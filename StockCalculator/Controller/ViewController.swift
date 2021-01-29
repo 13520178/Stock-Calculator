@@ -58,8 +58,8 @@ class ViewController: UIViewController,GADBannerViewDelegate,GADInterstitialDele
         IAPProduct.store.delegate = self
         if !defaults.bool(forKey: "isRemoveAds"){
             bannerView.delegate = self
-            //bannerView.adUnitID = ""
-            bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //Test
+            bannerView.adUnitID = "ca-app-pub-9626752563546060/7242960380"
+            //bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //Test
             bannerView.rootViewController = self
             
             //interstitial
@@ -103,15 +103,24 @@ class ViewController: UIViewController,GADBannerViewDelegate,GADInterstitialDele
         
     }
     
-    
-    @objc func sellCommissionTextfieldDidChange(_ textField: UITextField) {
-        sellCommissionTextfield.text = Tools.fixCurrencyTextInTextfield(moneyStr: sellCommissionTextfield.text ?? "" )
+    func requestIDFA() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                self.bannerView.load(GADRequest())
+                self.interstitial = self.createAndLoadInterstitial()
+            })
+        } else {
+            self.bannerView.load(GADRequest())
+            interstitial = createAndLoadInterstitial()
+        }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         reload()
     }
+    
     
     @objc func reload() {
         products = []
@@ -124,11 +133,13 @@ class ViewController: UIViewController,GADBannerViewDelegate,GADInterstitialDele
         if !defaults.bool(forKey: "isRemoveAds"){
             removeAdsButton.isHidden = false
             loadBannerAd()
-            heightFromCalculateButtonToInputViewBottomConstraint.constant = 70
+            requestIDFA()
+            self.heightFromCalculateButtonToInputViewBottomConstraint.constant = 70
         }else {
             removeAdsButton.isHidden = true
+            self.bannerView.isHidden = true
             self.heightFromInputToResultContraint.constant = 0
-            heightFromCalculateButtonToInputViewBottomConstraint.constant = 25
+            self.heightFromCalculateButtonToInputViewBottomConstraint.constant = 25
         }
     }
     
@@ -169,8 +180,8 @@ class ViewController: UIViewController,GADBannerViewDelegate,GADInterstitialDele
     
     // INTERSTITIAL MAKING
     func createAndLoadInterstitial() -> GADInterstitial {
-        //let interstitial = GADInterstitial(adUnitID: "")
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910") //Test
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9626752563546060/4616797041")
+        //let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910") //Test
         interstitial.delegate = self
         interstitial.load(GADRequest())
         return interstitial
@@ -204,6 +215,10 @@ class ViewController: UIViewController,GADBannerViewDelegate,GADInterstitialDele
     
     @objc func buyCommissionTextfieldDidChange(_ textField: UITextField) {
         buyCommissionTextfield.text = Tools.fixCurrencyTextInTextfield(moneyStr: buyCommissionTextfield.text ?? "" )
+    }
+    
+    @objc func sellCommissionTextfieldDidChange(_ textField: UITextField) {
+        sellCommissionTextfield.text = Tools.fixCurrencyTextInTextfield(moneyStr: sellCommissionTextfield.text ?? "" )
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -262,40 +277,40 @@ class ViewController: UIViewController,GADBannerViewDelegate,GADInterstitialDele
         if Double(numberOfSharesRemoveDot.replacingOccurrences(of: ",", with: "")) != nil {
             numberOfShares = Double(numberOfSharesRemoveDot.replacingOccurrences(of: ",", with: ""))!
         }else {
-            AlertService.showInfoAlert(in: self, title: "Error", message: "There was an error in the input process, please check again.")
+            AlertService.showInfoAlert(in: self, title: StringForLocal.error, message: StringForLocal.thereWasAnError)
             return
         }
         
         if Double(buyingPriceRemoveDot.replacingOccurrences(of: ",", with: "")) != nil {
             buyingPrice = Double(buyingPriceRemoveDot.replacingOccurrences(of: ",", with: ""))!
         }else {
-            AlertService.showInfoAlert(in: self, title: "Error", message: "There was an error in the input process, please check again.")
+            AlertService.showInfoAlert(in: self, title: StringForLocal.error, message: StringForLocal.thereWasAnError)
             return
         }
         
         if Double(sellingPriceRemoveDot.replacingOccurrences(of: ",", with: "")) != nil {
             sellingPrice = Double(sellingPriceRemoveDot.replacingOccurrences(of: ",", with: ""))!
         }else {
-            AlertService.showInfoAlert(in: self, title: "Error", message: "There was an error in the input process, please check again.")
+            AlertService.showInfoAlert(in: self, title: StringForLocal.error, message: StringForLocal.thereWasAnError)
             return
         }
         
         if Double(buyCommissionRemoveDot.replacingOccurrences(of: ",", with: "")) != nil {
             buyingCommission = Double(buyCommissionRemoveDot.replacingOccurrences(of: ",", with: ""))!
         }else {
-            AlertService.showInfoAlert(in: self, title: "Error", message: "There was an error in the input process, please check again.")
+            AlertService.showInfoAlert(in: self, title: StringForLocal.error, message: StringForLocal.thereWasAnError)
             return
         }
         
         if Double(sellCommissionRemoveDot.replacingOccurrences(of: ",", with: "")) != nil {
             sellingCommission = Double(sellCommissionRemoveDot.replacingOccurrences(of: ",", with: ""))!
         }else {
-            AlertService.showInfoAlert(in: self, title: "Error", message: "There was an error in the input process, please check again.")
+            AlertService.showInfoAlert(in: self, title: StringForLocal.error, message: StringForLocal.thereWasAnError)
             return
         }
         
         if numberOfShares < 0 {
-            AlertService.showInfoAlert(in: self, title: "Notification", message: "Number of Shares must be a non-negative number, please try again.")
+            AlertService.showInfoAlert(in: self, title: StringForLocal.notification, message: StringForLocal.numberOfSharesIsNotNegative)
             return
         }
         
@@ -342,7 +357,7 @@ class ViewController: UIViewController,GADBannerViewDelegate,GADInterstitialDele
     
     @IBAction func upgradeAndRemoveAdsButtonPressed(_ sender: UIButton) {
         if products.count >= 1 {
-            AlertService.showInfoAlertAndComfirm(in: self, message: "Upgrade to remove ads and unlock all features. Only \(Tools.priceFormatter.string(from: products[0].price)!)") {isOK in
+            AlertService.showInfoAlertAndComfirm(in: self, message: "\(StringForLocal.upgradeAndRemoveAds) \(Tools.priceFormatter.string(from: products[0].price)!)") {isOK in
                 if isOK {
                     //Purchase
                     if IAPHelper.canMakePayments(){
@@ -359,7 +374,7 @@ class ViewController: UIViewController,GADBannerViewDelegate,GADInterstitialDele
         if !defaults.bool(forKey: "isRemoveAds") {
             buyCommissionSegment.selectedSegmentIndex = 0
             if products.count >= 1 {
-                AlertService.showInfoAlertAndComfirm(in: self, message: "The default value is \"%\". Please unlock to change this value and remove ads. Only \(Tools.priceFormatter.string(from: products[0].price)!)") {isOK in
+                AlertService.showInfoAlertAndComfirm(in: self, message: "\(StringForLocal.defaultValueIsPercent) \(Tools.priceFormatter.string(from: products[0].price)!)") {isOK in
                     if isOK {
                         //Purchase
                         if IAPHelper.canMakePayments(){
@@ -379,7 +394,7 @@ class ViewController: UIViewController,GADBannerViewDelegate,GADInterstitialDele
         if !defaults.bool(forKey: "isRemoveAds") {
             sellCommissionSegment.selectedSegmentIndex = 0
             if products.count >= 1 {
-                AlertService.showInfoAlertAndComfirm(in: self, message: "The default value is \"%\". Please unlock to change this value and remove ads. Only \(Tools.priceFormatter.string(from: products[0].price)!)") {isOK in
+                AlertService.showInfoAlertAndComfirm(in: self, message: "\(StringForLocal.defaultValueIsPercent) \(Tools.priceFormatter.string(from: products[0].price)!)") {isOK in
                     if isOK {
                         //Purchase
                         if IAPHelper.canMakePayments(){
